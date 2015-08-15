@@ -1,0 +1,13 @@
+function titleCase(str) {
+  //turn each word of string into an element of an array
+  var myArray = str.split(" ");
+  var length = myArray.length;
+  //iterate through array and capitalize the first letter of each element
+  for (var i = 0; i < length; i++) {
+    //capitalize the first letter of each word and make the rest lowercase
+    myArray[i] = myArray[i].charAt(0).toUpperCase() + myArray[i].slice(1).toLowerCase();
+  }
+  //turn array back into a string
+  str = myArray.join(" ");
+  return str;
+}
