@@ -1,0 +1,17 @@
+function largestOfFour(arr) {
+  //declare and initialize an array with 4 numbers
+  maxArray = [0,0,0,0];
+  
+  //interate through the four sections of the main array
+  for(var i = 0; i < arr.length; i++) {
+  //iterate through each four part sub-array
+    for(var j = 0; j < arr[i].length; j++) {
+  //put the largest of each subarray into the main array
+      if(arr[i][j] > maxArray[i]) {
+        maxArray[i] = arr[i][j];
+      }
+    }
+    
+  }
+  return maxArray;
+}
