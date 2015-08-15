@@ -1,0 +1,12 @@
+function repeat(str, num) {
+  newstr = "";
+  if(num <= 0) {
+    return newstr;
+  } else  {
+    while (num > 0) {
+      newstr = newstr.concat(str);
+      num--;
+    }
+  }
+  return newstr;
+}
