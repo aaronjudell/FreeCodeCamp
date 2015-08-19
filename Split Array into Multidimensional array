@@ -1,0 +1,16 @@
+function chunk(arr, size) {
+  var newArray = [];
+  var tempArray = [];
+  var index = 0;
+  for(var i = 0; i < arr.length; i+=size) {
+    if (size + i > arr.length - 1) {
+      tempArray = arr.slice(i, arr.length);
+      newArray.push(tempArray);
+    } else {
+      tempArray = arr.slice(i, i+size);
+      newArray.push(tempArray);
+    }
+
+  }
+  return newArray;
+}
