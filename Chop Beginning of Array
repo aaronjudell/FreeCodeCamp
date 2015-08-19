@@ -1,0 +1,4 @@
+function slasher(arr, howMany) {
+  var newArray = arr.slice(howMany, arr.length);
+  return newArray;
+}
