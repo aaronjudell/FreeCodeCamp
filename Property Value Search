@@ -1,0 +1,11 @@
+function where(collection, source) {
+  var propArray = [];
+  //iterate through the main array
+  for (var i = 0; i < collection.length; i++) {
+      //if the element in the array has the same property as the source argument, then that element is pushed to a new array
+      if(collection[i][Object.keys(source)] === source[Object.keys(source)]) {
+      propArray.push(collection[i]);
+      }
+  }
+  return propArray;
+}
