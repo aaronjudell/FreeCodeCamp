@@ -1,0 +1,12 @@
+function bouncer(arr) {
+  //create array that will contain only non-false values
+  var newArr = [];
+  //iterate through array and only include non-falsey values in new array
+    for (var i = 0; i < arr.length; i++) {
+    var x = Boolean(arr[i]);
+      if (x) {
+        newArr.push(arr[i]);
+      }
+    }
+  return newArr;
+}
