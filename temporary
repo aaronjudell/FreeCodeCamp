@@ -1,0 +1,20 @@
+function destroyer(arr) {
+  //iterate through as many arguments that are entered, starting after the array
+ var newArray = [];
+  
+ for(var i = 1; i < arguments.length; i++) {
+        newArray = arr.filter(match);
+    }
+ 
+  function match(value) {
+    if(value !== arguments.caller[i]) {
+      return true;
+    } else {
+      return false;
+    }
+  }      
+
+  
+  
+  return newArray;
+}
