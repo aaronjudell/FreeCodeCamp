@@ -1,0 +1,26 @@
+function mutation(arr) {
+  var largeArray = [];
+  var smallArray = [];
+  
+  //make both elements of the array lowercase
+  arr[0] = arr[0].toLowerCase();
+  arr[1] = arr[1].toLowerCase();
+  
+  //create individual letter array for the first element of the parameter array
+  for(var i = 0; i < arr[0].length; i++) {
+    largeArray.push(arr[0].charAt(i));
+  } 
+  
+  //create individual letter array for the second element of the parameter array
+  for(var j = 0; j < arr[1].length; j++) {
+    smallArray.push(arr[1].charAt(j));
+  }
+  
+  //iterate through smallArray, checking to make sure each element is include in largeArray
+  for(var k = 0; k < smallArray.length; k++) {
+    if(largeArray.indexOf(smallArray[k], 0) === -1) {
+      return false;
+    }
+  }
+  return true;
+}
