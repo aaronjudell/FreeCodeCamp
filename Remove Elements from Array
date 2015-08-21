@@ -1,0 +1,16 @@
+function destroyer(arr) {
+  
+ //iterate through each additional argument after the initial array argument
+ for(var i = 1; i < arguments.length; i++) {
+  //itereate through the array argument and remove any element that is the same as the additional arguments
+   for(var j = 0; j < arr.length; j++) {
+     if(arr[j] === arguments[i]) {
+       arr.splice(j, 1);
+       //decrement j by 1 to make up for the array losing an element and decreasing in length by 1
+       j--;
+     }
+   }
+ }           
+
+  return arr;
+}
