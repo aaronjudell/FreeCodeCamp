@@ -1,16 +1,1 @@
-function destroyer(arr) {
-  
-//turn arguments into a variable to use it in another function, if i decide to use filter
-//var args = arguments;  
-  
-  
- for(var i = 1; i < arguments.length; i++) {
-   for(var j = 0; j < arr.length; j++) {
-     if(arr[j] === arguments[i]) {
-       arr.splice(j, 1);
-     }
-   }
- }           
 
-  return arr;
-}
